@@ -83,10 +83,10 @@ struct BAPerspectiveCamera : public BACamera {
   double k1_prior;
   double k2_prior;
 
-  BACameraType type() { return BA_PERSPECTIVE_CAMERA; }
-  double GetFocal() { return parameters[BA_CAMERA_FOCAL]; }
-  double GetK1() { return parameters[BA_CAMERA_K1]; }
-  double GetK2() { return parameters[BA_CAMERA_K2]; }
+  BACameraType type() const { return BA_PERSPECTIVE_CAMERA; }
+  double GetFocal() const { return parameters[BA_CAMERA_FOCAL]; }
+  double GetK1() const { return parameters[BA_CAMERA_K1]; }
+  double GetK2() const { return parameters[BA_CAMERA_K2]; }
   void SetFocal(double v) { parameters[BA_CAMERA_FOCAL] = v; }
   void SetK1(double v) { parameters[BA_CAMERA_K1] = v; }
   void SetK2(double v) { parameters[BA_CAMERA_K2] = v; }
@@ -132,9 +132,9 @@ struct BAFisheyeCamera : public BACamera{
   double k2_prior;
 
   BACameraType type() { return BA_FISHEYE_CAMERA; }
-  double GetFocal() { return parameters[BA_CAMERA_FOCAL]; }
-  double GetK1() { return parameters[BA_CAMERA_K1]; }
-  double GetK2() { return parameters[BA_CAMERA_K2]; }
+  double GetFocal() const { return parameters[BA_CAMERA_FOCAL]; }
+  double GetK1() const { return parameters[BA_CAMERA_K1]; }
+  double GetK2() const { return parameters[BA_CAMERA_K2]; }
   void SetFocal(double v) { parameters[BA_CAMERA_FOCAL] = v; }
   void SetK1(double v) { parameters[BA_CAMERA_K1] = v; }
   void SetK2(double v) { parameters[BA_CAMERA_K2] = v; }
@@ -147,10 +147,10 @@ struct BADualCamera : public BACamera{
   double k2_prior;
 
   BACameraType type() { return BA_DUAL_CAMERA; }
-  double GetFocal() { return parameters[BA_DUAL_CAMERA_FOCAL]; }
-  double GetK1() { return parameters[BA_DUAL_CAMERA_K1]; }
-  double GetK2() { return parameters[BA_DUAL_CAMERA_K2]; }
-  double GetTransition() { return parameters[BA_DUAL_CAMERA_TRANSITION]; }
+  double GetFocal() const { return parameters[BA_DUAL_CAMERA_FOCAL]; }
+  double GetK1() const { return parameters[BA_DUAL_CAMERA_K1]; }
+  double GetK2() const { return parameters[BA_DUAL_CAMERA_K2]; }
+  double GetTransition() const { return parameters[BA_DUAL_CAMERA_TRANSITION]; }
   void SetFocal(double v) { parameters[BA_DUAL_CAMERA_FOCAL] = v; }
   void SetK1(double v) { parameters[BA_DUAL_CAMERA_K1] = v; }
   void SetK2(double v) { parameters[BA_DUAL_CAMERA_K2] = v; }
